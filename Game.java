@@ -2,12 +2,12 @@ import java.util.Scanner;
 
 public class Game {
 
-	public static void main(String[] args) {
-		int q,n,leap,pos = 0;
+	public static void main(String[] args){
+		int q,n,leap,pos = -1;
 		System.out.println("Enter the number of querries");
 		Scanner scanner = new Scanner(System.in);
 		q = scanner.nextInt();
-		for(int i = 1; i<=q; i++) {
+		for(int i =1 ; i<=q; i++) {
 			System.out.println("Enter the array size");
 			n = scanner.nextInt();
 			System.out.println("Enter the leap size");
@@ -17,19 +17,27 @@ public class Game {
 			for(int j = 0; j<n; j++) {
 				game[j] = scanner.nextInt();
 			}
-			 while(pos<=n)
-			 {
-			for(int k =0; k<n; k++)
-				if(game[k+1]== 0)
+			/*for(int k =0; k<n; k++) {
+				if(k+1<=n && game[k+1]== 0)
 					pos = k+1;
-				else if(game[k+leap]== 0)
-					pos = k+leap;
-			 }
+				else if(k+leap<=n && game[k+leap]== 0)
+					pos = k+leap;*/
+			for(int k=pos; k<n; k++) {
+			if(game[k+1]==0) {
+				   pos++;
+				 System.out.println("pos is "+pos);
+			  }
+			else if(game[k+leap]==0) {
+				pos=pos+leap;
+			}
+		}
            if(pos>n)
         	   System.out.println("Congrats you won");
            else
         	   System.out.println("Oops you lose");
-		}		
+		}	
+		scanner.close();
 	}
-}
+  }
+
 
