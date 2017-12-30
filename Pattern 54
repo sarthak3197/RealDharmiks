@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Pattern {
+
+	public static void main(String[] args) {
+		int n;
+		System.out.println("Enter the number of lines");
+		Scanner obj = new Scanner(System.in);
+		n = obj.nextInt();
+		for(int i =1; i<=(n/2+1); i++)
+		{
+			for(int j=1; j<=i; j++)
+			{
+				System.out.print("*");
+			}
+			System.out.println("");
+		}
+	for(int k=1; k<=n/2;k++)
+	{
+		for(int l=n/2; l>=k; l--) {
+			System.out.print("*");
+		}
+		System.out.println("");
+	}
+	
+obj.close();
+	}
+}
