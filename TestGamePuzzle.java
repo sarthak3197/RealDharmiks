@@ -5,14 +5,14 @@ public class TestGamePuzzle {
 
 	public static void main(String[] args) 
 	{
-        Scanner scanner=new Scanner(System.in);
-		System.out.println("Enter q");
+		Scanner scanner=new Scanner(System.in);
 		GamePuzzle.q=scanner.nextInt();
+        SameLineInput read=new SameLineInput();
 		ArrayList<GamePuzzle> l=new ArrayList<GamePuzzle>();
 		for(int i=0;i<GamePuzzle.q;i++)
 		{
-			System.out.println("Enter n and leap");
-			GamePuzzle game=new GamePuzzle(scanner.nextInt(),scanner.nextInt());
+			read.operation();
+			GamePuzzle game=new GamePuzzle(read.getSizeandleap(),read.getGame());
 			l.add(game);
 
 		}

@@ -1,28 +1,18 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class GamePuzzle {
 	int n;
 	int leap;
 	static int q;
     List<Integer> game=new ArrayList<Integer>();
-	GamePuzzle(int n,int leap)
+	GamePuzzle(int sizeandleap[],List<Integer> game)
 	{
-		this.n=n;
-		this.leap=leap;
-	    creategame(n,leap);
+		this.n=sizeandleap[0];
+		this.leap=sizeandleap[1];
+        this.game=game;
 	}
-	public void creategame(int n,int leap)
-	{
-		@SuppressWarnings("resource")
-		Scanner scanner=new Scanner(System.in);
-		System.out.println("Enter game");
-		for(int i=0;i<n;i++)
-		{
-         game.add(scanner.nextInt());			
-		}
-	}
+
     public Boolean gamealgo()
     {
     	for(int i=0;i<n;i++)
@@ -31,10 +21,17 @@ public class GamePuzzle {
     			continue;
     		else
     		{
-    				if((i+leap)>n)
+    			i--;	
+    			if((i+leap)>(n-1))
     				return true;
-    				else
+    			if(game.get(i+leap)==0)
+    				{
+    				i++;
+    				continue;
+    				}
+    			else
     				return false;    
+    		    
     		}		
     	}
     	return true;
