@@ -18,8 +18,16 @@ public class GamePuzzle {
     	for(int i=0;i<n;i++)
     	{
     		if(game.get(i)==0)
-    			continue;
-    		else
+    			{
+    			 if((i+leap)<n-1)
+    			 {
+    			 if(game.get(i+leap)==0)
+    			  	i=i+leap-1;
+    			 else
+    				 continue;
+    			}
+    			}
+    			 else
     		{
     			i--;	
     			if((i+leap)>(n-1))
@@ -31,7 +39,6 @@ public class GamePuzzle {
     				}
     			else
     				return false;    
-    		    
     		}		
     	}
     	return true;
