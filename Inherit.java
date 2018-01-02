@@ -128,6 +128,7 @@ class Shape {
 		   }
 		   shape.display();
 	   }
+   }
 
   public class Inherit {
 	  
@@ -158,5 +159,6 @@ class Shape {
 		   drawing.caller(new Rectangle(l,b));
 		   
 		   scanner.close();
-	     }
-	  }
+	    }
+ }
+
