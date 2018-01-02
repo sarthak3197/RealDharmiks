@@ -23,7 +23,7 @@ class Circle extends Shape
 	}
 	void area()
 	{
-		area=Math.pow(3.14*length,2);
+		area=3.14*Math.pow(length,2);
 	}
     void perimeter()
     {
