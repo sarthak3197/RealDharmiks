@@ -32,7 +32,7 @@ class Circle extends Shape
     @Override
     void display()
     {
-		System.out.println("Area=r*r="+area);
+		System.out.println("Area=3.14*r*r="+area);
 		System.out.println("Perimeter=2*pie*r="+perimeter);
     }
 }
