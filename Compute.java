@@ -9,7 +9,7 @@ class Shape
     void display()
     {
     	 System.out.println("Area is a quantity that expresses the extent of a shape");
-    	 System.out.println("Perimeter is path that surrounds a shape");
+    	 System.out.println("Perimeter is path that surrounds a shape\n");
     }
 }
 
@@ -17,12 +17,13 @@ class Circle extends Shape
 {
 	Circle()
 	{
+		super.display();
 		System.out.println("Enter radius");
 		length=scanner.nextInt();
 	}
 	void area()
 	{
-		area=Math.pow(length,2);
+		area=Math.pow(3.14*length,2);
 	}
     void perimeter()
     {
