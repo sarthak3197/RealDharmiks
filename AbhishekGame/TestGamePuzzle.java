@@ -7,12 +7,10 @@ public class TestGamePuzzle {
 	{
 		Scanner scanner=new Scanner(System.in);
 		GamePuzzle.q=scanner.nextInt();
-        SameLineInput read=new SameLineInput();
 		ArrayList<GamePuzzle> l=new ArrayList<GamePuzzle>();
 		for(int i=0;i<GamePuzzle.q;i++)
 		{
-			read.operation();
-			GamePuzzle game=new GamePuzzle(read.getSizeandleap(),read.getGame());
+			GamePuzzle game=new GamePuzzle(scanner.nextInt(),scanner.nextInt());
 			l.add(game);
 
 		}
@@ -22,5 +20,4 @@ public class TestGamePuzzle {
 		}
        scanner.close();      
 	}
-
 }
